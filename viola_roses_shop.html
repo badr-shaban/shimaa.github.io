@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ڤيولا - متجر الورد</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">ڤ<span>ي</span>ولا</div>
+  <ul class="nav-links">
+    <li><a href="#products">المنتجات</a></li>
+    <li><a href="#why">لماذا نحن</a></li>
+    <li><a href="#newsletter">تواصل معنا</a></li>
+  </ul>
+  <div class="cart-pill" onclick="showCart()">
+    🛒 <span id="cart-count">0</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="petals-bg" id="petals"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ أجمل ورد طبيعي ✦</div>
+    <h1>ورد <em>بنفسجي</em><br>يسحر الأرواح</h1>
+    <p class="hero-sub">نقطف لك أندر الورود البنفسجية الطازجة، لتهدي من تحب لحظةً لا تُنسى</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">اكتشف المجموعة</button>
+      <button class="btn-outline" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})">تواصل معنا</button>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-item"><span class="stat-num">٥٠٠+</span><span class="stat-lbl">نوع من الورد</span></div>
+  <div class="stat-item"><span class="stat-num">١٢٠٠٠+</span><span class="stat-lbl">عميل سعيد</span></div>
+  <div class="stat-item"><span class="stat-num">١٠٠٪</span><span class="stat-lbl">طازج وطبيعي</span></div>
+  <div class="stat-item"><span class="stat-num">٢٤ساعة</span><span class="stat-lbl">توصيل سريع</span></div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-title">
+    <small>مجموعتنا المميزة</small>
+    <h2>ورود بنفسجية نادرة</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="products">
+    <div class="filter-tabs">
+      <button class="tab active" onclick="filterProducts('all', this)">الكل</button>
+      <button class="tab" onclick="filterProducts('bouquet', this)">باقات</button>
+      <button class="tab" onclick="filterProducts('single', this)">وردة واحدة</button>
+      <button class="tab" onclick="filterProducts('gift', this)">هدايا</button>
+    </div>
+    <div class="products-grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="section-title">
+    <small>ميزاتنا</small>
+    <h2>لماذا تختار ڤيولا؟</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🌿</div>
+      <h3>طازج دائماً</h3>
+      <p>نقطف الورد يومياً مباشرة من المزارع لضمان أعلى جودة</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🚚</div>
+      <h3>توصيل سريع</h3>
+      <p>نوصل طلبك خلال ٢٤ ساعة في درجة حرارة مثالية</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🎀</div>
+      <h3>تغليف فاخر</h3>
+      <p>كل باقة مُعبأة بأناقة في صندوق هدية مميز</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">💜</div>
+      <h3>مع رسالة حب</h3>
+      <p>أضف رسالتك الشخصية المطبوعة مجاناً مع كل طلب</p>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter" id="newsletter">
+  <h2>احصل على عروض حصرية 💌</h2>
+  <p>اشترك في قائمتنا وكن أول من يعرف عن باقاتنا الجديدة والخصومات</p>
+  <div class="nl-form">
+    <input type="email" placeholder="بريدك الإلكتروني..." />
+    <button onclick="subscribeNL()">اشترك الآن</button>
+  </div>
+</section>
+
+<footer>
+ تم تصميم هذا الموقع من الطالبه الشيماء عنتر 
+</footer>
+
+<div class="toast" id="toast">✓ تمت الإضافة إلى السلة</div>
+
+<script src="main.js">
+
+</script>
+</body>
+</html>
